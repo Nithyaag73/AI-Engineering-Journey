@@ -203,5 +203,4 @@ df.to_csv("cleaned_data.csv", index=False)
 
 ---
 
-⭐ Created for Data Science & Machine Learning Beginners  
-📈 Use this as a quick reference during projects
+
