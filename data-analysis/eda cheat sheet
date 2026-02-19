@@ -1,4 +1,4 @@
-#  PYTHON EDA CODE CHEAT SHEET
+# 📌 PYTHON EDA CODE CHEAT SHEET
 
 A quick and clean reference for performing Exploratory Data Analysis (EDA) using Python.
 
@@ -201,3 +201,4 @@ plt.show()
 df.to_csv("cleaned_data.csv", index=False)
 ```
 
+---
