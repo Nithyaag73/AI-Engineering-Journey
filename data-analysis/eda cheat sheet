@@ -1,4 +1,4 @@
-# 🧠 PYTHON EDA CHEAT SHEET
+#  PYTHON EDA CHEAT SHEET
 Complete Data Preprocessing & Exploration Workflow
 
 ---
@@ -176,7 +176,7 @@ df.to_csv("cleaned_data.csv", index=False)
 
 ---
 
-# 🚀 Professional Workflow Summary
+#  Professional Workflow Summary
 
 1. Import Libraries  
 2. Load Dataset  
@@ -189,6 +189,3 @@ df.to_csv("cleaned_data.csv", index=False)
 9. Feature Engineering  
 10. Save Cleaned Data  
 
----
-
-⭐ Reusable template for Data Analysis & Machine Learning projects.
