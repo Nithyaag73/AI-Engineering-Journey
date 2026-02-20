@@ -1,10 +1,11 @@
-# 📘 SQL Cheat Sheet – DDL, DML & DQL
+```
+# SQL Cheat Sheet – DDL, DML & DQL
 
-A quick reference guide for basic SQL commands used in relational databases like MySQL, PostgreSQL, and SQL Server.
+A quick reference guide for basic SQL commands used in relational databases.
 
-------------------------------------------------------------
+============================================================
 
-🔵 1️⃣ DDL – Data Definition Language
+1) DDL – Data Definition Language
 Used to define or modify database structure.
 
 Includes:
@@ -14,7 +15,7 @@ DROP
 
 ------------------------------------------------------------
 
-🔹 CREATE TABLE
+CREATE TABLE
 Creates a new table.
 
 CREATE TABLE table_name (
@@ -35,10 +36,10 @@ CREATE TABLE employee (
 
 ------------------------------------------------------------
 
-🔹 ALTER TABLE
+ALTER TABLE
 Used to modify an existing table.
 
-➤ Add Column
+Add Column:
 
 ALTER TABLE table_name
 ADD column_name datatype;
@@ -48,25 +49,25 @@ Example:
 ALTER TABLE employee
 ADD department VARCHAR(30);
 
-➤ Drop Column
+Drop Column:
 
 ALTER TABLE table_name
 DROP COLUMN column_name;
 
 ------------------------------------------------------------
 
-🔹 DROP TABLE
+DROP TABLE
 Deletes entire table structure including data.
 
 DROP TABLE table_name;
 
-⚠ Difference:
+Difference:
 DELETE → removes rows
-DROP → removes entire table
+DROP   → removes entire table
 
-------------------------------------------------------------
+============================================================
 
-🔵 2️⃣ DML – Data Manipulation Language
+2) DML – Data Manipulation Language
 Used to manipulate data inside tables.
 
 Includes:
@@ -76,7 +77,7 @@ DELETE
 
 ------------------------------------------------------------
 
-🔹 INSERT
+INSERT
 Adds rows to a table.
 
 INSERT INTO table_name (column1, column2)
@@ -87,13 +88,13 @@ Example:
 INSERT INTO employee (first, last, age, salary)
 VALUES ('Jonnie', 'Weber', 28, 19500);
 
-📌 Rules:
+Rules:
 Strings → use single quotes 'text'
 Numbers → no quotes
 
-------------------------------------------------------------
+============================================================
 
-🔵 3️⃣ DQL – Data Query Language
+3) DQL – Data Query Language
 Used to retrieve data from tables.
 
 Main Command:
@@ -101,7 +102,7 @@ SELECT
 
 ------------------------------------------------------------
 
-🔹 SELECT Examples
+SELECT Examples:
 
 SELECT first, last FROM empinfo;
 
@@ -112,7 +113,7 @@ SELECT * FROM empinfo;
 
 ------------------------------------------------------------
 
-🔹 WHERE Clause
+WHERE Clause
 Filters records.
 
 Operators:
@@ -132,7 +133,7 @@ WHERE salary > 30000;
 
 ------------------------------------------------------------
 
-🔹 LIKE Operator (Pattern Matching)
+LIKE Operator (Pattern Matching)
 
 Wildcards:
 %  → any characters
@@ -152,12 +153,11 @@ Contains:
 SELECT * FROM empinfo
 WHERE last LIKE '%illia%';
 
-------------------------------------------------------------
+============================================================
 
-🚀 Summary
+Summary
 
 DDL → CREATE, ALTER, DROP
 DML → INSERT, UPDATE, DELETE
 DQL → SELECT
-
-------------------------------------------------------------
+```
