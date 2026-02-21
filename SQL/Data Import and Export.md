@@ -17,16 +17,6 @@
 - [Data Export](#-data-export-from-mysql)
 - [Common Errors](#-common-errors--solutions)
 - [Summary](#-summary)
-
----
-
-# 📂 Prerequisites
-
-- MySQL Server 8.0+
-- CSV file ready for import
-- Basic knowledge of SQL
-- Administrator access (for enabling local infile)
-
 ---
 
 # 📥 Data Import Using Command Line
@@ -186,8 +176,6 @@ SET GLOBAL local_infile = 1;
 | Import CSV       | `LOAD DATA LOCAL INFILE`      |
 | Export CSV       | `SELECT INTO OUTFILE`         |
 | Full Backup      | `mysqldump`                   |
-
----
 
 ---
 
