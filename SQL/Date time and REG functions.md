@@ -212,6 +212,3 @@ This approach is cleaner, more readable, and scalable.
 
 ---
 
-Created as part of SQL learning and practical Data Analytics training.
-
-If you found this helpful, consider giving this repository a star.
