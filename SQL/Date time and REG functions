@@ -1,0 +1,220 @@
+# 📘 SQL Date, Time & REGEX Functions Cheat Sheet
+
+![SQL](https://img.shields.io/badge/Language-SQL-blue?style=for-the-badge&logo=mysql)
+![MySQL](https://img.shields.io/badge/Database-MySQL-orange?style=for-the-badge&logo=mysql)
+![Data Analytics](https://img.shields.io/badge/Use%20Case-Data%20Analytics-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Project-Active-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
+
+> A practical and professional guide to **Date & Time functions** and **Regular Expressions (REGEX)** in MySQL.  
+> Includes syntax, explanations, and real query examples for Data Analytics & SQL practice.
+
+---
+
+# 🗓️ DATE & TIME FUNCTIONS
+
+Date & Time functions are used to manipulate and extract information from date/time columns.
+
+They help you:
+- Format dates
+- Calculate differences between dates
+- Extract specific parts (day, quarter, etc.)
+- Add or subtract time intervals
+
+---
+
+## 🔹 1️⃣ DATEDIFF()
+
+Returns the number of days between two dates.
+
+### Syntax
+```sql
+DATEDIFF(date1, date2);
+```
+
+### Example
+```sql
+SELECT DATEDIFF('2025-01-10', '2025-01-01') AS days_difference;
+```
+
+---
+
+## 🔹 2️⃣ DATE_FORMAT()
+
+Formats a date value into a specific format.
+
+### Syntax
+```sql
+DATE_FORMAT(date, format);
+```
+
+### Example
+```sql
+SELECT DATE_FORMAT(NOW(), '%d-%m-%Y') AS formatted_date;
+```
+
+### Common Format Specifiers
+
+| Format | Meaning |
+|--------|---------|
+| %d     | Day (01–31) |
+| %m     | Month (01–12) |
+| %Y     | 4-digit year |
+| %W     | Weekday name |
+| %M     | Month name |
+
+---
+
+## 🔹 3️⃣ DAY()
+
+Returns the day of the month.
+
+```sql
+SELECT DAY('2025-02-23') AS day_value;
+```
+
+---
+
+## 🔹 4️⃣ QUARTER()
+
+Returns the quarter of the year (1–4).
+
+```sql
+SELECT QUARTER('2025-02-23') AS quarter_value;
+```
+
+---
+
+## 🔹 5️⃣ ADDDATE() / DATE_ADD()
+
+Adds days or intervals to a date.
+
+### Syntax
+```sql
+ADDDATE(date, INTERVAL value unit);
+```
+
+### Example
+```sql
+SELECT ADDDATE('2025-02-23', INTERVAL 10 DAY) AS new_date;
+```
+
+---
+
+# 🔎 REGEX (Regular Expressions) in MySQL
+
+When `LIKE` is not powerful enough, use `REGEXP`.
+
+REGEX helps you:
+- Match specific patterns
+- Search character ranges
+- Find complex text patterns
+
+---
+
+## 🔹 REGEXP Syntax
+
+```sql
+SELECT column_name
+FROM table_name
+WHERE column_name REGEXP 'pattern';
+```
+
+---
+
+# 📌 Example 1: Match Beginning of a Name
+
+```sql
+SELECT *
+FROM customer
+WHERE email REGEXP '^w';
+```
+
+`^w` → Matches values starting with "w"
+
+---
+
+# 📌 Example 2: Match Specific Characters (z, v, p)
+
+```sql
+SELECT *
+FROM customer
+WHERE email REGEXP '[zvp]';
+```
+
+`[zvp]` → Matches any email containing **z OR v OR p**
+
+---
+
+# 📌 Example 3: Match Character Range (x to z)
+
+```sql
+SELECT *
+FROM customer
+WHERE email REGEXP '[x-z]';
+```
+
+`[x-z]` → Matches any character between x and z
+
+---
+
+# 📌 Example 4: REGEXP Instead of Multiple LIKE
+
+Instead of:
+
+```sql
+SELECT COUNT(*)
+FROM telco_churna
+WHERE customerID LIKE '%v%'
+OR customerID LIKE '%w%'
+OR customerID LIKE '%x%';
+```
+
+Use:
+
+```sql
+SELECT COUNT(*)
+FROM telco_churna
+WHERE customerID REGEXP '[vwx]';
+```
+
+✔ Cleaner  
+✔ More readable  
+✔ More scalable  
+
+---
+
+# 🔥 LIKE vs REGEXP Comparison
+
+| Feature | LIKE | REGEXP |
+|----------|-------|---------|
+| Simple wildcard search | ✅ | ✅ |
+| Complex pattern matching | ❌ | ✅ |
+| Character ranges | ❌ | ✅ |
+| Multiple character match | Limited | Powerful |
+
+---
+
+# 🎯 When to Use What?
+
+- Use `LIKE` → Simple wildcard searches (`%`, `_`)
+- Use `REGEXP` → Advanced pattern matching
+
+---
+
+# 🧠 Best Practices
+
+- Avoid heavy REGEXP usage on very large datasets without indexing.
+- Use DATE functions for reporting and analytics.
+- Always validate REGEX patterns carefully.
+- Prefer clean and readable queries.
+
+---
+
+# 📚 References
+
+- MySQL Official Documentation  
+- W3Schools SQL Guide  
+
+---
+
