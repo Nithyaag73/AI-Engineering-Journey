@@ -36,4 +36,4 @@ Building real-world AI applications and strengthening problem-solving skills.
 
 ---
 
-⭐ Follow my journey as I grow into an AI Engineer!
+⭐ Follow my journey as I grow into an AI Engineer!...
