@@ -118,20 +118,3 @@ Final Output
 
 ---
 
-# ⚡ Best Practices
-
-✔ Test inner query separately  
-✔ Use proper indexing  
-✔ Prefer JOIN when performance matters  
-✔ Avoid deeply nested subqueries  
-
----
-
-# 🎯 Learning Outcome
-
-After completing this module, you should:
-
-- Understand execution order
-- Write single and correlated subqueries
-- Solve ranking problems
-- Compare aggregated results
