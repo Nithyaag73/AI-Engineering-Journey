@@ -117,15 +117,4 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 ---
 
-## Why This Is Important
-
-Understanding these concepts helps in:
-
-- Machine Learning projects
-- Data Science internships
-- AI model building
-- Technical interviews
-
----
-
 Author: Nithya G
