@@ -1,6 +1,5 @@
 # 📉 Cross-Entropy Loss Function in Machine Learning
 
-
 Cross-Entropy Loss is a **loss function used in classification problems** to measure how well a model’s predicted probabilities match the actual labels.
 
 👉 Key Idea:
